@@ -2,19 +2,19 @@
 #include <stdlib.h>
 #include <strings.h>
 
-void	ft_bzero(void *s, size_t n);
+char * ft_strcat(char *, const char *);
 
 int main(void)
 {
-	char	*str =(char*) malloc(11 + 1);
-	str[11] = '\0';
-	strcpy(str, "Hello World");
-	for (int i = 0; i < 12; ++i)
-		printf("%d ", str[i]);
-	putchar('\n');
-	ft_bzero(str, strlen(str));
-	for (int i = 0; i < 12; ++i)
-		printf("%d ", str[i]);
-	putchar('\n');
+	char	str[500];
+	char	str2[200];
+
+	strcpy(str, "0123456789");
+	strcpy(str2, "abcdefghihk");
+	puts(str);
+	ft_strcat(str, str2);
+	puts(str);
+	ft_strcat(str, str2);
+	puts(str);
 	return (0);
 }
