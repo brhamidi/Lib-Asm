@@ -6,17 +6,13 @@
 _ft_isalnum:
 	push	rbx
 	call	_ft_isdigit
-	cmp		rax, 1
-	jne		unmatch
-	call	_ft_isalpha
-	cmp		rax, 1
-	jne		unmatch
-	jmp		done
+	pop		rbx
+	cmp		rax, 0
+	je		unmatch
+	ret
 
 unmatch:
-	mov		rax, 0
-	jmp		done;
-
-done:
+	push	rbx
+	call	_ft_isalpha
 	pop		rbx
 	ret
