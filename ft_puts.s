@@ -1,5 +1,4 @@
 	global	_ft_puts
-	default	rel
 
 	section	.text
 _ft_puts:
@@ -24,7 +23,7 @@ print:
 nl:
 	mov		rax, 0x02000004
 	mov		rdi, 1
-	mov		rsi, newline
+	lea		rsi, [rel newline]
 	mov		rdx, 1
 	syscall
 	mov		rax, 10
