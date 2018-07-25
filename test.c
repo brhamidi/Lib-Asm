@@ -2,13 +2,15 @@
 #include <stdlib.h>
 #include <strings.h>
 
-
-int ft_puts(const char *);
+size_t	ft_strlen(const char *);
 
 int		main(void)
 {
-//	printf("%d\n", puts(NULL));
-	printf("%d\n", ft_puts("123456789"));
-	printf("%d\n", ft_puts("12"));
+	const char tab[] = "Hello World";
+	const char tab1[] = "Hello";
+	const char tab2[] = "H";
+	printf("ft_strlen(%s) -> %zu\n", tab, ft_strlen(tab));
+	printf("ft_strlen(%s) -> %zu\n", tab1, ft_strlen(tab1));
+	printf("ft_strlen(%s) -> %zu\n", tab2, ft_strlen(tab2));
 	return (0);
 }
