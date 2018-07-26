@@ -1,10 +1,12 @@
 	global	_ft_strlen
+	extern	_printf
 
 	section	.text
 _ft_strlen:
-		mov		rcx, 0
-		mov		al, 0
-		cld
- repne	scasb
-		mov		rax, rcx
-		ret
+	xor		al, al
+	mov		rcx, -1
+	repne	scasb
+	mov		rax, rcx
+	neg		rax
+	sub		rax, 2
+	ret
