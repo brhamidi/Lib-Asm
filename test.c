@@ -2,13 +2,16 @@
 #include <stdlib.h>
 #include <strings.h>
 
-void	*ft_memset(void *, int, size_t);
+void	*ft_memcpy(void *, void *, size_t);
 
 int		main(void)
 {
-	char tab[40] = "Hello World";
-	
-	puts( ft_memset((void *)tab, 'H', 5) );
-	puts(tab);
+	char 	src[50] = "Hello World";
+	char	*dst = malloc(10);
+	bzero(dst, 10);
+	strcpy(dst, "oklol");
+	puts(dst);
+	ft_memcpy(dst, src, 2);
+	puts(dst);
 	return (0);
 }
