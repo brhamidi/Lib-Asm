@@ -1,5 +1,4 @@
 	global	_ft_strlen
-	extern	_printf
 
 	section	.text
 _ft_strlen:
