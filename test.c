@@ -2,16 +2,17 @@
 #include <stdlib.h>
 #include <strings.h>
 
-void	*ft_memcpy(void *, void *, size_t);
+char	*ft_strdup(const char *);
 
 int		main(void)
 {
-	char 	src[50] = "Hello World";
-	char	*dst = malloc(10);
-	bzero(dst, 10);
-	strcpy(dst, "oklol");
-	puts(dst);
-	ft_memcpy(dst, src, 2);
-	puts(dst);
+	char	*str = strdup("ok brro");
+	char	*str2 = ft_strdup(str);
+
+	if (strcmp(str, str2))
+		return puts("strcmp failed");
+	if (str == str2)
+		return puts("error: same address");
+	puts("sucess");
 	return (0);
 }
