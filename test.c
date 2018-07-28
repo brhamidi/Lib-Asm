@@ -6,7 +6,7 @@
 /*   By: bhamidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/28 17:38:22 by bhamidi           #+#    #+#             */
-/*   Updated: 2018/07/28 18:53:10 by bhamidi          ###   ########.fr       */
+/*   Updated: 2018/07/28 19:03:03 by bhamidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <fcntl.h>
 #include <strings.h>
 
 int main(void)
@@ -100,6 +101,41 @@ int main(void)
 	puts(buf);
 
 	printf("\n============\nTEST FT_strdup\n");
+	char	*new = strdup("fleur");
+	char	*new1 = strdup(new);
+	puts(new1);
+	if (new == new1) puts("FAILED");
+	char	*newA = strdup("fleur");
+	char	*new1A = strdup(newA);
+	puts(new1A);
+	if (newA == new1A) puts("FAILED");
+
+	printf("\n============\nTEST FT_strlen\n");
+	printf("strlen(\"Hello World\") -> %zu\n", strlen("Hello WOrld"));
+	printf("ft_strlen(\"Hello World\") -> %zu\n", ft_strlen("Hello WOrld"));
+
+
+	printf("\n============\nTEST FT_strtolower\n");
+	printf("tolower('A') -> %c\n", tolower('A'));
+	printf("ft_tolower('A') -> %c\n", ft_tolower('A'));
+
+	printf("\n============\nTEST FT_strtoupper\n");
+	printf("tolower('a') -> %c\n", toupper('a'));
+	printf("ft_tolower('a') -> %c\n", ft_toupper('a'));
+
+	printf("\n============\nTEST FT_bzero\n");
+	strcpy(buf, "123456789012345");
+	for (int i = 0; i < 15; i ++) printf("%d ", buf[i]);
+	putchar('\n');
+	bzero(buf, 15);
+	for (int i = 0; i < 15; i ++) printf("%d ", buf[i]);
+	putchar('\n');
+	strcpy(buf, "123456789012345");
+	for (int i = 0; i < 15; i ++) printf("%d ", buf[i]);
+	putchar('\n');
+	ft_bzero(buf, 15);
+	for (int i = 0; i < 15; i ++) printf("%d ", buf[i]);
+	putchar('\n');
 
 
 	printf("\n============\nTEST FT_SUM\n");
@@ -107,5 +143,11 @@ int main(void)
 	printf("sum(-1, -2) -> %d\n", ft_sum(-1, -2));
 	printf("sum(0, 45) -> %d\n", ft_sum(0, 45));
 	printf("sum(-1, 5) -> %d\n", ft_sum(-1, 5));
+
+
+	printf("\n============\nTEST FT_cat\n");
+	ft_cat(-42);
+	ft_cat(open(__FILE__, O_RDONLY));
+	ft_cat(0);
 	return (0);
 }
