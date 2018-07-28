@@ -6,7 +6,7 @@
 #    By: bhamidi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/28 16:45:28 by bhamidi           #+#    #+#              #
-#    Updated: 2018/07/28 16:49:14 by bhamidi          ###   ########.fr        #
+#    Updated: 2018/07/28 17:29:32 by bhamidi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 CC 		= nasm
@@ -28,7 +28,9 @@ SRCS 	= ft_isalnum.s\
 		  ft_strnchr.s\
 		  ft_strncpy.s\
 		  ft_tolower.s\
-		  ft_toupper.s
+		  ft_toupper.s\
+		  ft_bzero.s\
+		  ft_cat.s
 
 OBJ = $(SRCS:.s=.o)
 
