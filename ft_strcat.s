@@ -21,6 +21,7 @@ _ft_strcat:
 	push	rdi
 	add		rdi, r8
 rep	movsb
+	mov		byte [rdi], 0
 	pop		rax
 	pop		rbp
 	ret

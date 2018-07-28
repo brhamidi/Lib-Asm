@@ -6,7 +6,7 @@
 /*   By: bhamidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/28 17:27:05 by bhamidi           #+#    #+#             */
-/*   Updated: 2018/07/28 17:29:12 by bhamidi          ###   ########.fr       */
+/*   Updated: 2018/07/28 17:54:06 by bhamidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ char	*ft_strnchr(const char *s, int c, size_t n);
 void	ft_cat(int fd);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t n);
-//int		ft_sum(int a, int b);
+int		ft_sum(int a, int b);
 
 #endif

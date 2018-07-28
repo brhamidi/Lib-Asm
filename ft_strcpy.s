@@ -14,6 +14,7 @@ _ft_strcpy:
 	pop		rsi
 	pop		rdi
 rep movsb
+	mov		byte [rdi], 0
 	pop		rax
 	ret
 
