@@ -38,8 +38,6 @@ work:
 
 error:
 	mov		rax, -1
-	ret
-
 end:
 	ret
 
